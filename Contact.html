@@ -1,0 +1,140 @@
+
+<link rel="stylesheet" href="rawah.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" type="text/css" href="navebar.css">
+    <style>
+        .table-container {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .table-container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ffcccc;
+            color: #333;
+        }
+
+        tbody tr:hover {
+            background-color: #ffe6e6;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+ 
+    </style>
+    <title>Contact Us</title>
+</head>
+<body>
+       <div class="navbar">
+        <h1>Flower.</h1>
+        <ul class="nav-links">
+            <li><a href="project.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="project.products.html">Products</a></li>
+            <li><a href="Review.html">Review</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <div class="icons">
+            <a href=""><img src="shop.jpg"></a>
+            <a href=""><img src="person.jpg"></a>
+        </div>
+    </div>
+    <h2 class="title">Contact Us</h2>
+  <div class="contact-container">
+    <div class="content">
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Enter your name" name="name" required>
+        <input type="email" placeholder="Enter your email" name="email" required>
+        <input type="text" placeholder="Enter your phone number" name="number" required>
+        <textarea placeholder="Write your message here" name="message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="image-container">
+        <img src="a3.jpg" alt="girl with flowers">
+      </div>
+    </div>
+    <p id="formStatus" style="margin-top: 15px; color:#ff66b3;"></p>
+
+    <div class="table-container">
+        <h2>Types of Services in the Flower Shop</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Service Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Flower Delivery</td>
+                    <td>Delivery of flowers to homes and offices.</td>
+                    <td>10SAR</td>
+                </tr>
+                <tr>
+                    <td>Event Flower Arrangement</td>
+                    <td>Designing flowers for weddings and parties.</td>
+                    <td>200SAR</td>
+                </tr>
+                <tr>
+                    <td>Ready-made Flowers Sale</td>
+                    <td>Selling pre-arranged bouquets and flowers.</td>
+                    <td>25SAR</td>
+                </tr>
+                <tr>
+                    <td>Flower Rental</td>
+                    <td>Renting flowers for decoration.</td>
+                    <td>150SAR</td>
+                </tr>
+                <tr>
+                    <td>Flower Arrangement Consultation</td>
+                    <td>Advice on professional flower arrangements.</td>
+                    <td>50SAR</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevents page reload
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+
+      console.log("Form Submitted:", data); // Display data in console (for testing)
+
+      status.textContent = "Thank you! Your message has been sent.";
+      form.reset();
+    });
+  </script>
+</body>
+</html>

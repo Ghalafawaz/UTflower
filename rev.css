@@ -1,0 +1,120 @@
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 300px;
+  position: relative;
+}
+
+.reviews-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.title {
+    font-size: 30px;
+    margin: 20px auto;
+    margin-top: 80px;
+    background-color: #fff0f5; 
+    padding: 40px 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 95%;
+    display: block;
+    color: black;
+}
+
+.bottom-background {
+    background-color: #fff0f5; 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 300px; 
+    z-index: -1; 
+}
+
+.title span {
+  color: #e91e63;
+}
+
+.review-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.stars {
+  margin-bottom: 10px;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #e91e63, 0 0 10px #ff80ab;
+  }
+  50% {
+    text-shadow: 0 0 15px #e91e63, 0 0 25px #ff80ab;
+  }
+  100% {
+    text-shadow: 0 0 5px #e91e63, 0 0 10px #ff80ab;
+  }
+}
+
+.stars i {
+  color: #e91e63;
+  font-size: 18px;
+  margin-right: 2px;
+  animation: glow 1.5s infinite;
+  transition: 0.3s;
+}
+
+.stars i:hover {
+  text-shadow: 0 0 12px #e91e63, 0 0 22px #ff80ab;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reviewer img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reviewer h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.reviewer p {
+  margin: 0;
+  font-size: 13px;
+  color: gray;
+}

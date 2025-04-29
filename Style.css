@@ -1,0 +1,34 @@
+body { 
+  background: url("flowere.jpg") center/cover no-repeat;
+  margin: 0;}
+.ection{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  padding: 50px;}
+.text{
+  padding-top: 100px;
+  max-width: 600px;
+ text-align: center;}
+ .text h1 {
+  font-size: 48px;
+  color: #333;
+  margin: 0;}
+.text h2 {
+  font-size: 24px;
+  color: #e91e63;
+  margin-top: 10px;}
+.mybutton {
+  background-color: black;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+  margin-top: 20px;}
+.mybutton:hover {
+  background-color: gray;
+  cursor: pointer;}
